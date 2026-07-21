@@ -1,9 +1,6 @@
 terraform {
-  cloud {
-    organization = "dummy-org"
-    workspaces {
-      name = "dummy-workspace"
-    }
+  backend "local" {
+    path = "/states/dev/dev-gcp.tfstate"
   }
 
   required_version = ">= 1.8.5"
