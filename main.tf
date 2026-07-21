@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "dummy-org"
+    workspaces {
+      name = "dummy-workspace"
+    }
+  }
+
   required_version = ">= 1.8.5"
   required_providers {
     google = {
@@ -11,3 +18,4 @@ terraform {
 provider "google" {
   project = "temp-gcp-project-id-for-test"
 }
+
